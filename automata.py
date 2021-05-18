@@ -21,6 +21,9 @@ class Automata:
         self.printInformationAutomata()
 
     def fillTransitionTable(self):
+        print("fill transitionTable")
+        print("if the transition with symbol is none then enter")
+        print("else input the state separated by spaces")
         self.transitionTable = {state: {alphabet: -1 for alphabet in self.alphabet} for state in self.states}
         for state in self.states:
             for symbol in self.alphabet:
