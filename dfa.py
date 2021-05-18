@@ -1,5 +1,4 @@
 from automata import Automata
-import pandas as pd
 
 class DFA(Automata):
     
@@ -48,6 +47,4 @@ class DFA(Automata):
             if flag:
                 self.stateFinal.append(nstate)
         self.transitionTable = dfa
-        nfa_table = pd.DataFrame(self.transitionTable)
-        print(nfa_table.transpose())
     
