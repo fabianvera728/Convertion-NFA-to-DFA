@@ -31,3 +31,21 @@ if __name__ == '__main__':
             dfa.run_automata()
         else:
             continue
+
+# Examples input quintuple
+
+# input states 
+#     a b c v
+# input alphabet
+#     0 1 2
+# input state final
+#     a b c
+# input state start
+#     v
+# input matriz transition
+#     a with 0: a b
+#     a with 1: v
+#     a with 2: 
+#   b with 0: b a
+#     ... etc
+
