@@ -24,8 +24,9 @@ class DFA(Automata):
                 temp = []           #creating a temporay list
                 for j in nstate:
                     for k in nfa.transitionTable[j][symbol]:
-                        if(not temp.__contains__(k) and nfa.transitionTable[j][symbol] != "" ):
-                            temp.extend(nfa.transitionTable[j][symbol])
+                        # if( not (k in temp) and  not temp.__contains__(k) and nfa.transitionTable[j][symbol] != "" ):
+                        if( k not in temp and nfa.transitionTable[j][symbol] != "" ):
+                            temp.extend(k)
                     if nfa.stateFinal.__contains__(j) and not self.stateFinal.__contains__(nstate):
                         flag = True
                 s = "".join(sorted(temp)) 
