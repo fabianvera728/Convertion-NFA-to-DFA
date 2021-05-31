@@ -28,8 +28,6 @@ class Automata:
         for state in self.states:
             for symbol in self.alphabet:
                 reaching_state =  input(f'{state} with {symbol}:').split()  #Enter all the end states
-                print(reaching_state)
-                print("".join(reaching_state))
                 self.transitionTable[state][symbol] = reaching_state
     
     def printInformationAutomata(self):
