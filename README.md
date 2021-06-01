@@ -9,6 +9,19 @@ Convert NFDA to DFA on python
 - Run automata's
 - Minimization of automata (in progress)
 
+### Requirement
+- Python 3+
+
+## Installation
+Clone this repository
+
+`$ git clone https://github.com/fabianvera728/Convertion-NFA-to-DFA`
+
+## Run program
+
+`$ cd Convertion-NFA-to-DFA`
+`$ python3 main.py`
+
 
 ## Screenshots
 
