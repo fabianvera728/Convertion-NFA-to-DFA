@@ -14,9 +14,11 @@ Convert NFDA to DFA on python
 
 - Run program
 
-![image](https://user-images.githubusercontent.com/64938329/120383488-8c7bee00-c2ea-11eb-850e-b8b2a4e5bb04.png)
+![image](https://user-images.githubusercontent.com/64938329/120385656-512eee80-c2ed-11eb-9309-6537ba068a22.png)
 
 - Option 1 define NFA
+
+![image](https://user-images.githubusercontent.com/64938329/120383488-8c7bee00-c2ea-11eb-850e-b8b2a4e5bb04.png)
 
 ![image](https://user-images.githubusercontent.com/64938329/120383805-f399a280-c2ea-11eb-84ef-cb64e214dea6.png)
 
