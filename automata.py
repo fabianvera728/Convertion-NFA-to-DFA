@@ -2,7 +2,7 @@
     author: Fabian Hernando Vera Carrillo
 """
 
-import pandas as pd
+from pandas import DataFrame
 
 class Automata:
     def __init__(self):
@@ -13,24 +13,19 @@ class Automata:
         self.transitionTable = {}
 
     def fillInformationDFA(self):
-        self.states = input("Enter list of states separated by spaces: ").split()
+        self.states = [tuple([x]) for x in input("Enter list of states separated by spaces: ").split()]
         self.alphabet = input("Enter input alphabet separated by spaces: ").split()
         self.stateStart = input("Input the state initial: ")
-        self.stateFinal = input("Input state final or the state separated by spaces: ").split()
+        self.stateFinal = tuple(input("Input state final or the state separated by spaces: ").split())
         self.fillTransitionTable();
         self.printInformationAutomata()
 
     def fillTransitionTable(self):
-        print("fill transitionTable")
-        print("if the transition with symbol is none then enter")
-        print("else input the state separated by spaces")
-        self.transitionTable = {state: {alphabet: -1 for alphabet in self.alphabet} for state in self.states}
+        print("fill transitionTable example: q0 q1, example: enter")
         for state in self.states:
-            for symbol in self.alphabet:
-                reaching_state =  input(f'{state} with {symbol}:').split()  #Enter all the end states
-                self.transitionTable[state][symbol] = reaching_state
+            self.transitionTable[state] = {symbol: tuple(input(f'{state} with {symbol}: ').split()) for symbol in self.alphabet}
     
-    def printInformationAutomata(self):
+    def printInformationAutomata(self): 
         print("----Quintuple----")
         print("\nStates")
         print(self.states)
@@ -41,13 +36,13 @@ class Automata:
         print("\nState final")
         print(self.stateFinal) 
         print("\nTransition table")
-        print(pd.DataFrame(self.transitionTable))
+        [print(key,":",value) for key,value in self.transitionTable.items()]
 
     def run_automata(self):
         print("Alphabet\n",self.alphabet)
         inputData = input("Input your sequence without spaces: ")
         print(inputData)
-        currentState = self.stateStart
+        currentState = tuple([self.stateStart])
         for i in inputData:
             if(self.alphabet.__contains__(i)):
                 if(self.states.__contains__(self.transitionTable[currentState][i])):
