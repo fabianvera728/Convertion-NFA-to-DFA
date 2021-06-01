@@ -2,7 +2,7 @@
 Author: Fabian Hernando Vera Carrillo
 Convert NFDA to DFA on python 
 
-###Features
+### Features
 - Define qintuple for DFA
 - Define qintuple for NFDA
 - Convertion NFA to DFA
@@ -10,7 +10,7 @@ Convert NFDA to DFA on python
 - Minimization of automata (in progress)
 
 
-##Capturas del programa
+## Capturas del programa
 
 - Ejecucion del programa
 
