@@ -4,13 +4,20 @@ from dfa import DFA
 from nfda import NFA
 
 def main():
-    print("-----Menu-----\n")
-    print("1. Define NFDA")
-    print("2. Define DFA")
-    print("3. Convert NFDA to DFA")
-    print("4. Run automata")
-    print("0. Exit")
-    return int(input("Input yout option: "))
+    while True:
+        try:
+            
+            print("-----Menu-----\n")
+            print("1. Define NFDA")
+            print("2. Define DFA")
+            print("3. Convert NFDA to DFA")
+            print("4. Run automata")
+            print("0. Exit")
+            return int(input("Input yout option: "))
+        except Exception as e:
+            print("Error: ",e)
+            print("¡Try again!")
+
 
 if __name__ == '__main__':
     option = 1;
